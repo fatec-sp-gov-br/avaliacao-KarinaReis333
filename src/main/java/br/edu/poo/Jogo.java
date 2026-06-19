@@ -6,7 +6,6 @@ public class Jogo {
 
         Personagem artemis = new Personagem("Artemis", 30, 12, 4);
         Personagem goblin = new Personagem("Goblin", 20, 8, 2);
-
         Pocao pocaoPequena = new Pocao("Poção Pequena", 10);
 
         boolean goblinUsouPocaoNoTurno = false;
@@ -35,13 +34,10 @@ public class Jogo {
                 goblin.usarPocao(pocaoPequena);
                 System.out.println(goblin.getNome() + " possui " + goblin.getVida() + " de vida\n");
                 goblinUsouPocaoNoTurno = true;
-                
-                goblin.usarPocao(pocaoPequena); 
             }
         }
 
         System.out.println("=== FIM DA BATALHA ===");
-        
         if (artemis.estaVivo()) {
             System.out.println("Vencedor: " + artemis.getNome());
         } else {

@@ -1,14 +1,12 @@
 package br.edu.poo;
 
 public class Personagem {
-    // Atributos (Adicionado 'final' para limpar os avisos do VS Code)
     private final String nome;
-    private int vida; // Não pode ser final porque muda no combate
+    private int vida;
     private final int ataque;
     private final int defesa;
     private boolean pocaoUtilizada;
 
-    // Construtor
     public Personagem(String nome, int vida, int ataque, int defesa) {
         this.nome = nome;
         this.vida = vida;
@@ -17,7 +15,6 @@ public class Personagem {
         this.pocaoUtilizada = false;
     }
 
-    // Métodos obrigatórios
     public void atacar(Personagem inimigo) {
         int danoCalculado = this.ataque - inimigo.defesa;
         if (danoCalculado < 1) {
